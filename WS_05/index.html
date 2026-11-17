@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">Menu</label>
+
+      <div class="nav-links">
+        <!--grouping the content-->
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section id="home">
+      <h1>Welcome to My Responsive Page</h1>
+      <p>This is a responsive web page example.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <img
+        src="image.png"
+        alt="Responsive Image"
+        class="responsive-image"
+        width="500"
+        height="600"
+      />
+      <p>This section contains information about me.</p>
+    </section>
+
+    <div class="responsive-container">
+      <div class="column">Column 1</div>
+      <div class="column">Column 2</div>
+    </div>
+
+    <div class="media-query-box">Resize the window to see the effect</div>
+
+    <section id="contact">
+      <h2>Contact</h2>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+
+
+.responsive-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .column {
+      flex: 1;
+      padding: 10px;
+    }
+    
+    @media (max-width: 600px) {
+      .column {
+        flex: 100%;
+      }
+   
+   
+    }
+    .responsive-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .media-query-box {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+      .media-query-box {
+        background-color: lightcoral;
+      }
+    }
+    
+    @media (min-width: 601px) {
+      .media-query-box {
+        background-color: lightblue;
+      }
+    }
+
+
+    .responsive-nav .nav-list {
+      display: flex;
+      list-style: none;
+    }
+    
+    @media (max-width: 600px) {
+      .responsive-nav .nav-list {
+        display: none;
+      }
+    
+      .responsive-nav .menu-toggle {
+        display: block;
+      }
+    }
+
+    .nav-toggle {
+    display: none;
+}
+
+/* Hamburger icon label — visible on mobile */
+.nav-toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    color: var(--color-white);
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+/* Three-bar hamburger icon using ::after */
+.nav-toggle-label::after {
+    content: "☰";
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+/* tuntiesimerkki testaus */
+nav {
+    background-color: lightblue;
+    padding: 0 16px;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    margin-bottom: 24px;
+    position: relative;
+}
+
+/* Hide the actual checkbox */
+.nav-toggle {
+    display: none;
+}
+
+/* Hamburger icon label — visible on mobile */
+.nav-toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    color: var(--color-white);
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+/* Three-bar hamburger icon using ::after */
+.nav-toggle-label::after {
+    content: "☰";
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+/* Nav links: hidden by default on mobile, stacked vertically */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 12px;
+}
+
+/* Show nav links when checkbox is checked (hamburger toggled) */
+.nav-toggle:checked ~ .nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--color-primary);
+}
+
+.nav-links a.active {
+    background-color: var(--color-primary);
+    pointer-events: none;
+}
